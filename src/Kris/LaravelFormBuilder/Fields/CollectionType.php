@@ -78,7 +78,7 @@ class CollectionType extends ParentType
         $this->children = [];
         $type = $this->getOption('type');
         $oldInput = $this->parent->getRequest()->old($this->getNameKey());
-        $currentInput = $this->parent->getRequest()->input($this->getNameKey());
+        $currentInput = $this->parent->getRequest()->input($this->getNameKey(), []);
 
         try {
             $fieldType = $this->formHelper->getFieldType($type);
