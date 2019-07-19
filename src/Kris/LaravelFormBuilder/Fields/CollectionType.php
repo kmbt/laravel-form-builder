@@ -100,9 +100,7 @@ class CollectionType extends ParentType
             $data = $currentInput;
         }
 
-        // Needs to have more than 1 item because 1 is rendered by default.
-        // This overrides current request in situations when validation fails.
-        if ($oldInput && count($oldInput) > 1) {
+        if ($oldInput) { // && count($oldInput) > 1) {
             $data = $oldInput;
         }
 
